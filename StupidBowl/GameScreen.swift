@@ -8,8 +8,38 @@
 import SwiftUI
 
 struct GameScreen: View {
+    @ObservedObject var stupidQuestions = StupidQuestions()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                ForEach(stupidQuestions.items) { item in
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(item.question)
+   //                             .font(.headline)
+  //                          Text(item.answer)
+                        }
+                        Spacer()
+   //                     Text(item.dueDate, style: .date)
+                    }
+                }
+                .onMove(perform: {
+                    indices, newOffset in stupidQuestions.items.move(fromOffsets: indices, toOffset: newOffset)
+                })
+  //              .onDelete(perform: { indexSet in stupidQuestions.items.remove(atOffsets: indexSet)
+   //             })
+            }
+   //         .sheet(isPresented: $showingAddItemView, content: {
+   //             AddItemView(toDoList: toDoList)
+   //         })
+            .navigationBarTitle("Stupid Bowl")
+   //         .navigationBarItems(leading: EditButton(),
+    //                            trailing: Button(action: {
+    //                                                showingAddItemView = true}) {
+    //                                Image(systemName: "plus")
+     //                           })
+        }
     }
 }
 
@@ -17,4 +47,10 @@ struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         GameScreen()
     }
+}
+
+struct StupidQuestion: Identifiable {
+    var id = UUID()
+    var question = String()
+    var answer = String()
 }

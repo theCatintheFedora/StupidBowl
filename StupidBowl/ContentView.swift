@@ -8,6 +8,8 @@ import UIKit
 import SwiftUI
 
 struct ContentView: View {
+//    @ObservedObject var stupidQuestions = StupidQuestions()
+    
     var body: some View {
             Text("Welcome To Stupid Bowl!")
         NavigationView{
@@ -28,3 +30,10 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+/*
+struct StupidQuestions: Identifiable {
+    var id = UUID()
+    var question = String()
+    var answer = String()
+}
+*/
