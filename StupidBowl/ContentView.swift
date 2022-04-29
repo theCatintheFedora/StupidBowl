@@ -10,8 +10,11 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-            Text("Welcome To Stupid Bowl!")
+            
         NavigationView{
+            VStack{
+        Text("Welcome To Stupid Bowl!")
+            
         NavigationLink( destination: GameScreen(), label: {
             ZStack {
             Image("banner")
@@ -20,6 +23,7 @@ struct ContentView: View {
                 
             }
         })
+        }
         }
     }
 }
