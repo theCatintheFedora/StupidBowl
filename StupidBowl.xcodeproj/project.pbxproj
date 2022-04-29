@@ -12,6 +12,7 @@
 		3F2D50D427FDE78C00D42AF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F2D50D327FDE78C00D42AF4 /* Assets.xcassets */; };
 		3F2D50D727FDE78C00D42AF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F2D50D627FDE78C00D42AF4 /* Preview Assets.xcassets */; };
 		3F2D50DF2818464800D42AF4 /* StupidQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D50DE2818464800D42AF4 /* StupidQuestions.swift */; };
+		3F2D50E1281AF09000D42AF4 /* AddQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D50E0281AF09000D42AF4 /* AddQuestionView.swift */; };
 		3FA9B8332813049200E08A0D /* GameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA9B8322813049200E08A0D /* GameScreen.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		3F2D50D627FDE78C00D42AF4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3F2D50D827FDE78C00D42AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F2D50DE2818464800D42AF4 /* StupidQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StupidQuestions.swift; sourceTree = "<group>"; };
+		3F2D50E0281AF09000D42AF4 /* AddQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionView.swift; sourceTree = "<group>"; };
 		3FA9B8322813049200E08A0D /* GameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 				3F2D50D127FDE78600D42AF4 /* ContentView.swift */,
 				3FA9B8322813049200E08A0D /* GameScreen.swift */,
 				3F2D50DE2818464800D42AF4 /* StupidQuestions.swift */,
+				3F2D50E0281AF09000D42AF4 /* AddQuestionView.swift */,
 				3F2D50D327FDE78C00D42AF4 /* Assets.xcassets */,
 				3F2D50D827FDE78C00D42AF4 /* Info.plist */,
 				3F2D50D527FDE78C00D42AF4 /* Preview Content */,
@@ -147,6 +150,7 @@
 				3F2D50DF2818464800D42AF4 /* StupidQuestions.swift in Sources */,
 				3F2D50D227FDE78600D42AF4 /* ContentView.swift in Sources */,
 				3F2D50D027FDE78600D42AF4 /* StupidBowlApp.swift in Sources */,
+				3F2D50E1281AF09000D42AF4 /* AddQuestionView.swift in Sources */,
 				3FA9B8332813049200E08A0D /* GameScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

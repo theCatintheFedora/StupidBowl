@@ -8,7 +8,6 @@ import UIKit
 import SwiftUI
 
 struct ContentView: View {
-//    @ObservedObject var stupidQuestions = StupidQuestions()
     
     var body: some View {
             Text("Welcome To Stupid Bowl!")

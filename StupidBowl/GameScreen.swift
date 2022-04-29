@@ -11,6 +11,7 @@ struct GameScreen: View {
     @ObservedObject var stupidQuestions = StupidQuestions()
     
     var body: some View {
+        VStack {
         NavigationView {
             List {
                 ForEach(stupidQuestions.items) { item in
@@ -39,6 +40,8 @@ struct GameScreen: View {
     //                                                showingAddItemView = true}) {
     //                                Image(systemName: "plus")
      //                           })
+        }
+            Text("All questions are owned by Questions Galore")
         }
     }
 }
