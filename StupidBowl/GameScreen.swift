@@ -9,16 +9,20 @@ import SwiftUI
 
 struct GameScreen: View {
     @ObservedObject var stupidQuestions = StupidQuestions()
+    @State private var response = ""
     
     var body: some View {
         VStack {
         NavigationView {
             List {
+                Text("Answer these stupid quizbowl questions").font(.title)
                 ForEach(stupidQuestions.items) { item in
                     HStack {
                         VStack(alignment: .leading) {
                             Text(item.question)
-   //                             .font(.headline)
+                                .font(.headline)
+                            Spacer()
+                            TextField("Answer", text: $response)
   //                          Text(item.answer)
                         }
                         Spacer()
