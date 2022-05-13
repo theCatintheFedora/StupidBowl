@@ -21,7 +21,7 @@ struct GameScreen: View {
                             Text(item.question)
                                 .font(.headline)
                             Spacer()
-  //                          TextField("Answer", text: )
+                            TextField("Answer", text: responseBinding(response: item.response))
   //                          Text(item.answer)
                         }
                         Spacer()
@@ -46,6 +46,17 @@ struct GameScreen: View {
         }
             Text("All questions are owned by Questions Galore")
         }
+    }
+    func responseBinding(response: String) -> Binding<String> {
+        var string = response
+        var responseBinding: Binding<String> {
+            Binding {
+                string
+            }   set: {
+                string = $0
+            }
+        }
+        return responseBinding
     }
 }
 
