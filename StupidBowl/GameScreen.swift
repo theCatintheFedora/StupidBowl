@@ -12,7 +12,6 @@ struct GameScreen: View {
     
     var body: some View {
         VStack {
-        NavigationView {
             List {
                 Text("Answer these stupid quizbowl questions").font(.title)
                 ForEach(stupidQuestions.items) { item in
@@ -22,28 +21,27 @@ struct GameScreen: View {
                                 .font(.headline)
                             Spacer()
                             TextField("Answer", text: responseBinding(response: item.response))
-  //                          Text(item.answer)
+                            //                          Text(item.answer)
                         }
                         Spacer()
-   //                     Text(item.dueDate, style: .date)
+                        //                     Text(item.dueDate, style: .date)
                     }
                 }
                 .onMove(perform: {
                     indices, newOffset in stupidQuestions.items.move(fromOffsets: indices, toOffset: newOffset)
                 })
-  //              .onDelete(perform: { indexSet in stupidQuestions.items.remove(atOffsets: indexSet)
-   //             })
+                //              .onDelete(perform: { indexSet in stupidQuestions.items.remove(atOffsets: indexSet)
+                //             })
             }
-   //         .sheet(isPresented: $showingAddItemView, content: {
-   //             AddItemView(toDoList: toDoList)
-   //         })
+            //         .sheet(isPresented: $showingAddItemView, content: {
+            //             AddItemView(toDoList: toDoList)
+            //         })
             .navigationBarTitle("Stupid Bowl")
-   //         .navigationBarItems(leading: EditButton(),
-    //                            trailing: Button(action: {
-    //                                                showingAddItemView = true}) {
-    //                                Image(systemName: "plus")
-     //                           })
-        }
+            //         .navigationBarItems(leading: EditButton(),
+            //                            trailing: Button(action: {
+            //                                                showingAddItemView = true}) {
+            //                                Image(systemName: "plus")
+            //                           })
             Text("All questions are owned by Questions Galore")
         }
     }
