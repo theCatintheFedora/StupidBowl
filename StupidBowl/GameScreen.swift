@@ -9,7 +9,6 @@ import SwiftUI
 
 struct GameScreen: View {
     @ObservedObject var stupidQuestions = StupidQuestions()
-    @State private var response = ""
     
     var body: some View {
         VStack {
@@ -22,7 +21,7 @@ struct GameScreen: View {
                             Text(item.question)
                                 .font(.headline)
                             Spacer()
-                            TextField("Answer", text: $response)
+  //                          TextField("Answer", text: )
   //                          Text(item.answer)
                         }
                         Spacer()
@@ -60,4 +59,5 @@ struct StupidQuestion: Identifiable {
     var id = UUID()
     var question = String()
     var answer = String()
+    var response = String()
 }
