@@ -14,6 +14,7 @@
 		3F2D50DF2818464800D42AF4 /* StupidQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D50DE2818464800D42AF4 /* StupidQuestions.swift */; };
 		3F2D50E1281AF09000D42AF4 /* AddQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D50E0281AF09000D42AF4 /* AddQuestionView.swift */; };
 		3FA9B8332813049200E08A0D /* GameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA9B8322813049200E08A0D /* GameScreen.swift */; };
+		3FA9B8352835487A00E08A0D /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA9B8342835487A00E08A0D /* ResultsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3F2D50DE2818464800D42AF4 /* StupidQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StupidQuestions.swift; sourceTree = "<group>"; };
 		3F2D50E0281AF09000D42AF4 /* AddQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionView.swift; sourceTree = "<group>"; };
 		3FA9B8322813049200E08A0D /* GameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreen.swift; sourceTree = "<group>"; };
+		3FA9B8342835487A00E08A0D /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				3F2D50CF27FDE78600D42AF4 /* StupidBowlApp.swift */,
 				3F2D50D127FDE78600D42AF4 /* ContentView.swift */,
 				3FA9B8322813049200E08A0D /* GameScreen.swift */,
+				3FA9B8342835487A00E08A0D /* ResultsView.swift */,
 				3F2D50DE2818464800D42AF4 /* StupidQuestions.swift */,
 				3F2D50E0281AF09000D42AF4 /* AddQuestionView.swift */,
 				3F2D50D327FDE78C00D42AF4 /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F2D50DF2818464800D42AF4 /* StupidQuestions.swift in Sources */,
+				3FA9B8352835487A00E08A0D /* ResultsView.swift in Sources */,
 				3F2D50D227FDE78600D42AF4 /* ContentView.swift in Sources */,
 				3F2D50D027FDE78600D42AF4 /* StupidBowlApp.swift in Sources */,
 				3F2D50E1281AF09000D42AF4 /* AddQuestionView.swift in Sources */,

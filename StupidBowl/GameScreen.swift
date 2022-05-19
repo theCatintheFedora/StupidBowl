@@ -14,13 +14,14 @@ struct GameScreen: View {
         VStack {
             List {
                 Text("Answer these stupid quizbowl questions").font(.title)
-                ForEach(stupidQuestions.items) { item in
+                ForEach(stupidQuestions.items.indices) { item in
                     HStack {
                         VStack(alignment: .leading) {
-                            Text(item.question)
+                            Text(stupidQuestions.items[item].question)
                                 .font(.headline)
                             Spacer()
-                            TextField("Answer", text: responseBinding(response: item.response))
+                            TextField("Answer", text: responseBinding(response: item))
+                            
                             //                          Text(item.answer)
                         }
                         Spacer()
@@ -30,6 +31,13 @@ struct GameScreen: View {
                 .onMove(perform: {
                     indices, newOffset in stupidQuestions.items.move(fromOffsets: indices, toOffset: newOffset)
                 })
+                NavigationLink(destination: ResultsView(score: returnScore(), results: returnWrongAnswers())){
+                       Capsule()
+                        .background(Color.red)
+                        
+                    }
+                
+                
                 //              .onDelete(perform: { indexSet in stupidQuestions.items.remove(atOffsets: indexSet)
                 //             })
             }
@@ -45,16 +53,34 @@ struct GameScreen: View {
             Text("All questions are owned by Questions Galore")
         }
     }
-    func responseBinding(response: String) -> Binding<String> {
-        var string = response
+    func responseBinding(response: Int) -> Binding<String> {
         var responseBinding: Binding<String> {
             Binding {
-                string
+                stupidQuestions.items[response].response
             }   set: {
-                string = $0
+                stupidQuestions.items[response].response = $0
             }
         }
         return responseBinding
+    }
+    func returnScore() -> (String) {
+        var correctAnswers = 0
+        for i in 0..<stupidQuestions.items.count {
+            print(stupidQuestions.items[i].answer, stupidQuestions.items[i].response)
+            if(stupidQuestions.items[i].answer == stupidQuestions.items[i].response){
+                correctAnswers += 1
+            }
+        }
+        return ("You got \(correctAnswers) out of \(stupidQuestions.items.count) questions correct.")
+    }
+    func returnWrongAnswers() -> [String] {
+        var incorrectAnswers = [String]()
+        for i in 0..<stupidQuestions.items.count {
+            if(stupidQuestions.items[i].answer != stupidQuestions.items[i].response){
+                incorrectAnswers.append("You answered \(stupidQuestions.items[i].response), the correct answer is \(stupidQuestions.items[i].answer)")
+            }
+        }
+        return incorrectAnswers
     }
 }
 
