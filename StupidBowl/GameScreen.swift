@@ -32,9 +32,11 @@ struct GameScreen: View {
                     indices, newOffset in stupidQuestions.items.move(fromOffsets: indices, toOffset: newOffset)
                 })
                 NavigationLink(destination: ResultsView(score: returnScore(), results: returnWrongAnswers())){
+                    ZStack{
                        Capsule()
-                        .background(Color.red)
-                        
+                        Text("Check Answers")
+                            .foregroundColor(.white)
+                    }
                     }
                 
                 
